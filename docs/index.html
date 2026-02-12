@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for MARK - Voice-Enabled Expense Tracker. Compliant with India's DPDP Act 2023.">
+    <meta name="keywords" content="MARK, privacy policy, expense tracker, data protection, DPDP Act">
+    <meta name="author" content="Chinmoy Dutta">
+    <title>Privacy Policy - MARK (Money App Re-invented, Kinda)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="index.html">Privacy Policy</a> | 
+        <a href="terms.html">Terms of Service</a>
+    </nav>
+    
+    <main>
+        <header>
+            <h1>Privacy Policy</h1>
+            <p class="app-name"><strong>MARK</strong> (Money App Re-invented, Kinda)</p>
+            <p class="effective-date"><strong>Effective Date:</strong> February 12, 2026</p>
+            <p class="last-updated"><strong>Last Updated:</strong> February 12, 2026</p>
+        </header>
+        
+        <nav class="toc">
+            <h2>Table of Contents</h2>
+            <ol>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#information-collection">Information We Collect</a></li>
+                <li><a href="#how-we-use">How We Use Your Information</a></li>
+                <li><a href="#legal-basis">Legal Basis for Processing</a></li>
+                <li><a href="#data-storage">Data Storage & Security</a></li>
+                <li><a href="#third-party">Third-Party Services</a></li>
+                <li><a href="#your-rights">Your Rights (Data Principal Rights)</a></li>
+                <li><a href="#data-retention">Data Retention & Deletion</a></li>
+                <li><a href="#children">Children's Privacy</a></li>
+                <li><a href="#international">International Users</a></li>
+                <li><a href="#changes">Changes to Privacy Policy</a></li>
+                <li><a href="#grievance">Grievance Redressal Officer</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ol>
+        </nav>
+
+        <section id="introduction">
+            <h2>1. Introduction</h2>
+            <p>Welcome to <strong>MARK</strong> (Money App Re-invented, Kinda), a voice-enabled expense tracking application for mobile devices. This privacy policy describes how we collect, use, store, and protect your personal data.</p>
+            
+            <p><strong>Service Provider:</strong> Chinmoy Dutta (Individual Developer)<br>
+            <strong>Contact Email:</strong> <a href="mailto:dattatechom@gmail.com">dattatechom@gmail.com</a><br>
+            <strong>Jurisdiction:</strong> India<br>
+            <strong>Compliance:</strong> Digital Personal Data Protection Act (DPDP Act), 2023</p>
+
+            <p>By using MARK, you consent to the processing of your personal data as described in this Privacy Policy. This policy applies to all users who download and use the MARK mobile application.</p>
+
+            <p class="notice"><strong>Important Note:</strong> MARK follows a <strong>local-first, privacy-preserving architecture</strong>. Your financial data is stored primarily on your device and never transmitted to our servers. Optional cloud backup is fully under your control via your personal Google Drive.</p>
+        </section>
+
+        <section id="information-collection">
+            <h2>2. Information We Collect</h2>
+            <p>We collect only the minimum information necessary to provide our expense tracking services. Here's a comprehensive breakdown:</p>
+
+            <h3>A. Account Information</h3>
+            <p><strong>What We Collect:</strong></p>
+            <ul>
+                <li>Email address (from Google Sign-In)</li>
+                <li>Display name</li>
+                <li>Profile photo URL</li>
+                <li>Firebase Authentication UID (unique identifier)</li>
+            </ul>
+            <p><strong>Purpose:</strong> User authentication, identification, and account management.</p>
+            <p><strong>Storage:</strong> Managed by Firebase Authentication (Google LLC).</p>
+            <p><strong>Legal Basis:</strong> Consent (required for creating an account).</p>
+
+            <h3>B. Financial Data (Local-First Storage)</h3>
+            <p><strong>What We Collect:</strong></p>
+            <ul>
+                <li>Expense and income transactions (amount, currency, date, time)</li>
+                <li>Categories, merchants, tags, and descriptions</li>
+                <li>Budget settings and recurring transaction rules</li>
+                <li>Debt tracking information (borrowed/lent amounts)</li>
+                <li>ML classification metadata (confidence scores, classification sources)</li>
+                <li>Raw voice transcription text (when using voice input)</li>
+            </ul>
+            <p><strong>Storage:</strong></p>
+            <ul>
+                <li><strong>Primary:</strong> Encrypted SQLite database on your device</li>
+                <li><strong>Backup (Optional):</strong> Your personal Google Drive (user-controlled, requires explicit consent)</li>
+            </ul>
+            <p><strong>Purpose:</strong> Core expense tracking functionality, analytics, budgeting, and reporting.</p>
+            <p><strong>Legal Basis:</strong> Consent (necessary for providing the service).</p>
+            <p><strong>Important:</strong> We DO NOT store your financial data on our servers. It remains on your device or your personal cloud storage only.</p>
+
+            <h3>C. Voice Recordings</h3>
+            <p><strong>What We Collect:</strong> Temporary audio recordings when you use voice input for expense logging.</p>
+            
+            <p><strong>Processing Methods:</strong></p>
+            <ul>
+                <li><strong>Offline Mode (Default):</strong>
+                    <ul>
+                        <li>Audio processed entirely on-device using Whisper model</li>
+                        <li>No data leaves your device</li>
+                        <li>Deleted immediately after transcription</li>
+                    </ul>
+                </li>
+                <li><strong>Online Mode (Opt-in):</strong>
+                    <ul>
+                        <li>Audio sent to Google Gemini API via Firebase Cloud Function</li>
+                        <li>Processed on Google's servers (located in United States)</li>
+                        <li>Deleted immediately after API response (typically within 1-2 seconds)</li>
+                        <li><strong>Data Transfer Notice:</strong> Your voice data is temporarily transferred outside India to Google's servers for transcription</li>
+                    </ul>
+                </li>
+            </ul>
+            <p><strong>Retention:</strong> Deleted immediately after transcription completes. We do NOT store voice recordings permanently.</p>
+            <p><strong>Purpose:</strong> Voice-to-text conversion for expense logging.</p>
+            <p><strong>Legal Basis:</strong> Explicit consent (you choose offline or online mode).</p>
+
+            <h3>D. Device Information</h3>
+            <p><strong>What We Collect:</strong></p>
+            <ul>
+                <li>Device model and type</li>
+                <li>Battery status (for animation optimization)</li>
+                <li>Network connectivity status (Wi-Fi, mobile data, offline)</li>
+                <li>Operating system version</li>
+            </ul>
+            <p><strong>Purpose:</strong> App optimization, selecting appropriate ML models, enabling/disabling battery-intensive features.</p>
+            <p><strong>Legal Basis:</strong> Legitimate interest (necessary for app functionality).</p>
+
+            <h3>E. Advertising Data (Google AdMob)</h3>
+            <p><strong>What We Collect:</strong></p>
+            <ul>
+                <li>Google Advertising ID</li>
+                <li>Ad interaction events (views, clicks, completions)</li>
+                <li>IP address (collected by Google AdMob)</li>
+            </ul>
+            <p><strong>Managed By:</strong> Google LLC (AdMob service)</p>
+            <p><strong>Purpose:</strong> Serving rewarded video ads that allow you to earn credits for premium features.</p>
+            <p><strong>Legal Basis:</strong> Consent (you choose to watch ads to earn credits).</p>
+            <p><strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></p>
+
+            <h3>F. Push Notification Tokens</h3>
+            <p><strong>What We Collect:</strong> Firebase Cloud Messaging (FCM) device tokens.</p>
+            <p><strong>Purpose:</strong> Sending push notifications for trial reminders and important updates.</p>
+            <p><strong>Storage:</strong> Managed by Firebase Messaging (Google LLC).</p>
+            <p><strong>Legal Basis:</strong> Consent (you can disable notifications in device settings).</p>
+        </section>
+
+        <section id="how-we-use">
+            <h2>3. How We Use Your Information</h2>
+            <p>We use the collected information for the following purposes:</p>
+            <ul>
+                <li><strong>Authentication:</strong> Verify your identity and manage your account using Firebase Auth</li>
+                <li><strong>Core Functionality:</strong> Store, organize, and analyze your financial transactions</li>
+                <li><strong>Voice Processing:</strong> Convert voice commands into expense entries</li>
+                <li><strong>Analytics:</strong> Generate spending insights, monthly reports, and budget tracking</li>
+                <li><strong>Notifications:</strong> Send trial reminders and important app updates</li>
+                <li><strong>Monetization:</strong> Display rewarded video ads (AdMob) to earn credits</li>
+                <li><strong>App Optimization:</strong> Select appropriate ML models and optimize battery usage based on device capabilities</li>
+                <li><strong>Backup & Sync:</strong> Optional backup to your personal Google Drive (requires explicit consent)</li>
+            </ul>
+            <p><strong>We DO NOT:</strong></p>
+            <ul>
+                <li>Sell your personal data to third parties</li>
+                <li>Use your financial data for targeted advertising</li>
+                <li>Share your data with data brokers</li>
+                <li>Store your financial data on our servers</li>
+                <li>Track your location</li>
+            </ul>
+        </section>
+
+        <section id="legal-basis">
+            <h2>4. Legal Basis for Processing (DPDP Act 2023)</h2>
+            <p>Under India's Digital Personal Data Protection Act (DPDP Act), 2023, we process your personal data based on the following legal grounds:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data Type</th>
+                        <th>Legal Basis</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Account Information</td>
+                        <td>Consent</td>
+                        <td>Required for account creation and authentication</td>
+                    </tr>
+                    <tr>
+                        <td>Financial Data</td>
+                        <td>Consent</td>
+                        <td>Necessary to provide expense tracking service</td>
+                    </tr>
+                    <tr>
+                        <td>Voice Recordings</td>
+                        <td>Explicit Consent</td>
+                        <td>You choose offline or online voice processing mode</td>
+                    </tr>
+                    <tr>
+                        <td>Device Information</td>
+                        <td>Legitimate Interest</td>
+                        <td>Necessary for app functionality and optimization</td>
+                    </tr>
+                    <tr>
+                        <td>Advertising Data</td>
+                        <td>Consent</td>
+                        <td>You choose to watch ads to earn credits</td>
+                    </tr>
+                    <tr>
+                        <td>FCM Tokens</td>
+                        <td>Consent</td>
+                        <td>Can be disabled in device settings</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><strong>Consent Management:</strong> You can withdraw consent at any time by:</p>
+            <ul>
+                <li>Disabling voice features (Settings → Voice)</li>
+                <li>Disabling notifications (Device Settings → Notifications)</li>
+                <li>Deleting Google Drive backup (Settings → Backup)</li>
+                <li>Deleting your account (Settings → Account → Delete Account)</li>
+                <li>Uninstalling the app (complete data removal from device)</li>
+            </ul>
+        </section>
+
+        <section id="data-storage">
+            <h2>5. Data Storage & Security</h2>
+            <p>We take data security seriously and implement industry-standard measures to protect your information.</p>
+
+            <h3>Storage Architecture</h3>
+            <ul>
+                <li><strong>Local-First:</strong> Your financial data is primarily stored on your device using encrypted SQLite database (Drift ORM)</li>
+                <li><strong>Optional Cloud Backup:</strong> You can enable backup to your personal Google Drive (fully user-controlled)</li>
+                <li><strong>Firebase Services:</strong> Only used for authentication and push notifications (no financial data stored)</li>
+            </ul>
+
+            <h3>Security Measures</h3>
+            <ul>
+                <li><strong>Encryption at Rest:</strong> SQLite database encrypted using industry-standard algorithms</li>
+                <li><strong>Encryption in Transit:</strong> All network communications use HTTPS/TLS encryption</li>
+                <li><strong>Access Controls:</strong> Only authenticated users can access their own data</li>
+                <li><strong>Data Isolation:</strong> Each user's data is completely isolated from other users</li>
+                <li><strong>Secure Authentication:</strong> Firebase Authentication with Google Sign-In (OAuth 2.0)</li>
+                <li><strong>No Server-Side Storage:</strong> We don't maintain centralized servers with user financial data</li>
+            </ul>
+
+            <h3>Data Location</h3>
+            <ul>
+                <li><strong>Financial Data:</strong> Your device (and optionally, your Google Drive)</li>
+                <li><strong>Authentication:</strong> Firebase servers (multi-region, including India)</li>
+                <li><strong>Voice Processing (Online Mode):</strong> Temporarily on Google Gemini servers (United States)</li>
+                <li><strong>Cloud Functions:</strong> Firebase Cloud Functions (Asia-South1 / Mumbai region)</li>
+            </ul>
+
+            <p class="notice"><strong>Important:</strong> While we implement strong security measures, no system is 100% secure. You are responsible for maintaining the security of your device and Google account credentials.</p>
+        </section>
+
+        <section id="third-party">
+            <h2>6. Third-Party Services</h2>
+            <p>MARK integrates with the following third-party services. Each service has its own privacy policy that governs how they handle your data:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Purpose</th>
+                        <th>Data Shared</th>
+                        <th>Privacy Policy</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Firebase Authentication</strong></td>
+                        <td>User authentication</td>
+                        <td>Email, name, photo, UID</td>
+                        <td><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google Gemini API</strong></td>
+                        <td>Voice transcription (online mode)</td>
+                        <td>Audio recordings (temporary)</td>
+                        <td><a href="https://policies.google.com/privacy" target="_blank">Google Privacy</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google Drive API</strong></td>
+                        <td>Optional backup</td>
+                        <td>Financial data (user-controlled)</td>
+                        <td><a href="https://policies.google.com/privacy" target="_blank">Google Privacy</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google AdMob</strong></td>
+                        <td>Rewarded video ads</td>
+                        <td>Ad ID, IP address, interactions</td>
+                        <td><a href="https://support.google.com/admob/answer/6128543" target="_blank">AdMob Privacy</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Firebase Messaging</strong></td>
+                        <td>Push notifications</td>
+                        <td>FCM token, device info</td>
+                        <td><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Firebase Cloud Functions</strong></td>
+                        <td>API proxy (no data storage)</td>
+                        <td>Request data (not stored)</td>
+                        <td><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google Sign-In</strong></td>
+                        <td>OAuth authentication</td>
+                        <td>Email, name, photo</td>
+                        <td><a href="https://policies.google.com/privacy" target="_blank">Google Privacy</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><strong>Data Transfer Notice:</strong> When using online voice transcription, your audio data is temporarily transferred to Google's servers located outside India (United States). This transfer is necessary to provide high-accuracy voice transcription. You can opt for offline mode to process all voice data locally on your device.</p>
+
+            <p><strong>We are not responsible</strong> for the privacy practices of third-party services. Please review their privacy policies independently.</p>
+        </section>
+
+        <section id="your-rights">
+            <h2>7. Your Rights (Data Principal Rights - DPDP Act 2023)</h2>
+            <p>Under India's Digital Personal Data Protection Act (DPDP Act), 2023, you have the following rights regarding your personal data:</p>
+
+            <h3>Right to Access</h3>
+            <p><strong>What it means:</strong> You can request a copy of all personal data we hold about you.</p>
+            <p><strong>How to exercise:</strong> Settings → Export Data → CSV Export. This generates a machine-readable CSV file with all your expenses, income, budgets, and metadata.</p>
+
+            <h3>Right to Correction</h3>
+            <p><strong>What it means:</strong> You can correct inaccurate or incomplete personal data.</p>
+            <p><strong>How to exercise:</strong> Edit transactions, categories, budgets directly within the app. Changes are saved immediately.</p>
+
+            <h3>Right to Erasure</h3>
+            <p><strong>What it means:</strong> You can request deletion of your personal data.</p>
+            <p><strong>How to exercise:</strong> Settings → Account → Delete Account. This is an irreversible action that deletes:</p>
+            <ul>
+                <li>Your Firebase Authentication account</li>
+                <li>All local database records on your device</li>
+                <li>Google Drive backup (if enabled)</li>
+                <li>All associated metadata</li>
+            </ul>
+
+            <h3>Right to Data Portability</h3>
+            <p><strong>What it means:</strong> You can export your data in a machine-readable format.</p>
+            <p><strong>How to exercise:</strong> Settings → Export Data → CSV Export. The CSV file can be imported into other apps or spreadsheets.</p>
+
+            <h3>Right to Withdraw Consent</h3>
+            <p><strong>What it means:</strong> You can withdraw consent for data processing at any time.</p>
+            <p><strong>How to exercise:</strong></p>
+            <ul>
+                <li><strong>Voice Features:</strong> Settings → Voice → Disable Voice Input</li>
+                <li><strong>Push Notifications:</strong> Device Settings → Apps → MARK → Notifications → Disable</li>
+                <li><strong>Google Drive Backup:</strong> Settings → Backup → Disable Auto-Backup / Delete Backup</li>
+                <li><strong>AdMob:</strong> Don't watch ads (credits won't be earned)</li>
+                <li><strong>Complete Withdrawal:</strong> Delete your account (Settings → Account → Delete Account)</li>
+            </ul>
+
+            <h3>Right to Grievance Redressal</h3>
+            <p><strong>What it means:</strong> You can file a complaint if you believe your data rights have been violated.</p>
+            <p><strong>How to exercise:</strong> Contact our Grievance Redressal Officer at <a href="mailto:dattatechom@gmail.com">dattatechom@gmail.com</a> (see <a href="#grievance">Section 12</a> for details).</p>
+
+            <h3>Right to Nominate</h3>
+            <p><strong>What it means:</strong> You can nominate another individual to exercise your rights in the event of death or incapacity (as per DPDP Act).</p>
+            <p><strong>How to exercise:</strong> Contact us at <a href="mailto:dattatechom@gmail.com">dattatechom@gmail.com</a> to register a nominee.</p>
+
+            <p class="notice"><strong>Response Time:</strong> We will respond to your rights requests within <strong>48 hours</strong> and resolve issues within <strong>7 business days</strong>, as required by the DPDP Act.</p>
+        </section>
+
+        <section id="data-retention">
+            <h2>8. Data Retention & Deletion</h2>
+            
+            <h3>Retention Periods</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data Type</th>
+                        <th>Retention Period</th>
+                        <th>Reason</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Account Data</td>
+                        <td>While account is active</td>
+                        <td>Required for authentication</td>
+                    </tr>
+                    <tr>
+                        <td>Financial Data</td>
+                        <td>While account is active</td>
+                        <td>Core app functionality</td>
+                    </tr>
+                    <tr>
+                        <td>Voice Recordings</td>
+                        <td>&lt; 1 minute (immediate deletion)</td>
+                        <td>Only needed for transcription</td>
+                    </tr>
+                    <tr>
+                        <td>FCM Tokens</td>
+                        <td>60 days (auto-refresh)</td>
+                        <td>Push notification infrastructure</td>
+                    </tr>
+                    <tr>
+                        <td>Device Information</td>
+                        <td>Session duration only</td>
+                        <td>Not stored persistently</td>
+                    </tr>
+                    <tr>
+                        <td>AdMob Data</td>
+                        <td>Managed by Google</td>
+                        <td>Subject to Google's policies</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Inactive Account Policy (DPDP Act Requirement)</h3>
+            <p>As required by the DPDP Act, we cannot store personal data for more than <strong>1 year of user inactivity</strong>:</p>
+            <ul>
+                <li><strong>Inactivity Threshold:</strong> 365 days without opening the app</li>
+                <li><strong>Warning Notice:</strong> You'll receive an email notification that your account will be deleted in 48 hours</li>
+                <li><strong>Grace Period:</strong> 48 hours to log in and prevent deletion</li>
+                <li><strong>Automatic Deletion:</strong> If no action taken, all data is permanently deleted</li>
+            </ul>
+
+            <h3>Account Deletion Process</h3>
+            <p>When you delete your account (Settings → Account → Delete Account):</p>
+            <ol>
+                <li><strong>Confirmation Dialog:</strong> You must confirm the irreversible action</li>
+                <li><strong>Immediate Deletion:</strong> All data is deleted instantly, including:
+                    <ul>
+                        <li>Firebase Authentication account</li>
+                        <li>Local SQLite database</li>
+                        <li>Google Drive backup files (if enabled)</li>
+                        <li>FCM tokens (invalidated)</li>
+                        <li>All transaction history and metadata</li>
+                    </ul>
+                </li>
+                <li><strong>Confirmation Email:</strong> You'll receive an email confirming account deletion</li>
+                <li><strong>No Recovery:</strong> Deleted data cannot be recovered</li>
+            </ol>
+
+            <h3>Exceptions (Legal Requirements)</h3>
+            <p>In rare cases, we may be legally required to retain certain data:</p>
+            <ul>
+                <li><strong>Tax Compliance:</strong> If requested by Indian tax authorities (Income Tax Department)</li>
+                <li><strong>Law Enforcement:</strong> If ordered by a court or law enforcement agency</li>
+                <li><strong>Dispute Resolution:</strong> If data is subject to ongoing legal proceedings</li>
+            </ul>
+            <p>In such cases, only the minimum necessary data will be retained, and you will be notified if legally permissible.</p>
+        </section>
+
+        <section id="children">
+            <h2>9. Children's Privacy</h2>
+            
+            <h3>Age Requirement</h3>
+            <p>MARK is intended for users <strong>18 years or older</strong>. We do not knowingly collect personal data from individuals under 18 years of age.</p>
+
+            <h3>Why 18 Years?</h3>
+            <ul>
+                <li>India's DPDP Act sets the age of consent for data processing at <strong>18 years</strong> (not 13 as in some other jurisdictions)</li>
+                <li>Financial apps require legal capacity to enter contracts</li>
+                <li>Expense tracking involves managing personal finances, which is typically an adult activity</li>
+            </ul>
+
+            <h3>Parental Notice</h3>
+            <p>If you are a parent or guardian and believe your child under 18 has provided personal data to MARK:</p>
+            <ul>
+                <li>Contact us immediately at <a href="mailto:dattatechom@gmail.com">dattatechom@gmail.com</a></li>
+                <li>Provide the child's email address (if known)</li>
+                <li>We will delete the account and all associated data within 48 hours of verification</li>
+            </ul>
+
+            <h3>Verification</h3>
+            <p>We do not currently implement age verification mechanisms at registration. Users are expected to comply with the 18+ age requirement. Future versions may include age verification for enhanced compliance.</p>
+        </section>
+
+        <section id="international">
+            <h2>10. International Users</h2>
+            
+            <p>While MARK is primarily designed for Indian users and complies with India's DPDP Act 2023, we also respect the privacy rights of users in other jurisdictions.</p>
+
+            <h3>For Users in the European Union (GDPR)</h3>
+            <p>If you are located in the EU, you have additional rights under the General Data Protection Regulation (GDPR):</p>
+            <ul>
+                <li><strong>Right to Object:</strong> You can object to data processing based on legitimate interests</li>
+                <li><strong>Right to Restrict Processing:</strong> You can request temporary restriction of processing</li>
+                <li><strong>Right to Lodge a Complaint:</strong> You can file a complaint with your local Data Protection Authority</li>
+                <li><strong>Data Controller:</strong> Chinmoy Dutta is the data controller for EU users</li>
+                <li><strong>Legal Basis:</strong> Consent and legitimate interest (app functionality)</li>
+            </ul>
+
+            <h3>For Users in California (CCPA/CPRA)</h3>
+            <p>If you are a California resident, you have rights under the California Consumer Privacy Act (CCPA):</p>
+            <ul>
+                <li><strong>Right to Know:</strong> Request disclosure of personal information collected (Settings → Export Data)</li>
+                <li><strong>Right to Delete:</strong> Request deletion of personal information (Settings → Delete Account)</li>
+                <li><strong>Right to Opt-Out:</strong> We do not sell personal information, so opt-out is not applicable</li>
+                <li><strong>Non-Discrimination:</strong> We will not discriminate against you for exercising your rights</li>
+            </ul>
+
+            <h3>Data Transfers</h3>
+            <p>Your data may be transferred to and processed in countries outside your country of residence:</p>
+            <ul>
+                <li><strong>Firebase Services:</strong> Multi-region infrastructure (includes US, Europe, Asia)</li>
+                <li><strong>Google Gemini (Online Mode):</strong> United States</li>
+                <li><strong>Your Google Drive:</strong> Depends on your Google account settings</li>
+            </ul>
+            <p>These transfers are necessary to provide the services. By using MARK, you consent to these transfers.</p>
+        </section>
+
+        <section id="changes">
+            <h2>11. Changes to Privacy Policy</h2>
+            
+            <h3>How We Update This Policy</h3>
+            <p>We may update this Privacy Policy from time to time to reflect:</p>
+            <ul>
+                <li>Changes in our data practices</li>
+                <li>New features or services</li>
+                <li>Legal or regulatory requirements</li>
+                <li>User feedback and best practices</li>
+            </ul>
+
+            <h3>Notification of Changes</h3>
+            <p>When we make material changes to this Privacy Policy, we will notify you through:</p>
+            <ul>
+                <li><strong>In-App Notification:</strong> A banner or dialog in the app highlighting changes</li>
+                <li><strong>Email:</strong> Notification to your registered email address</li>
+                <li><strong>This Page:</strong> Updated "Last Updated" date at the top of this page</li>
+            </ul>
+
+            <h3>Your Continued Use</h3>
+            <p>By continuing to use MARK after changes to this Privacy Policy, you accept the updated terms. If you do not agree with the changes, you may delete your account.</p>
+
+            <h3>Material Changes Requiring Consent</h3>
+            <p>If changes involve new data collection or processing that requires consent (under DPDP Act), we will explicitly ask for your consent before implementing such changes. You can decline consent, though this may limit certain features.</p>
+
+            <h3>Version History</h3>
+            <p>Current Version: <strong>1.0</strong> (February 12, 2026)</p>
+        </section>
+
+        <section id="grievance">
+            <h2>12. Grievance Redressal Officer (DPDP Act Requirement)</h2>
+            
+            <p>As required by India's Digital Personal Data Protection Act (DPDP Act), 2023, we have appointed a Grievance Redressal Officer to address your data privacy concerns.</p>
+
+            <h3>Grievance Officer Details</h3>
+            <p><strong>Name:</strong> Chinmoy Dutta<br>
+            <strong>Email:</strong> <a href="mailto:dattatechom@gmail.com">dattatechom@gmail.com</a><br>
+            <strong>Response Time:</strong> Within 48 hours of receiving complaint<br>
+            <strong>Resolution Time:</strong> Within 7 business days</p>
+
+            <h3>How to File a Complaint</h3>
+            <ol>
+                <li><strong>Email Us:</strong> Send an email to <a href="mailto:dattatechom@gmail.com">dattatechom@gmail.com</a> with:
+                    <ul>
+                        <li>Your registered email address</li>
+                        <li>Subject line: "Privacy Complaint - [Brief Description]"</li>
+                        <li>Detailed description of the issue</li>
+                        <li>Supporting documents (if any)</li>
+                    </ul>
+                </li>
+                <li><strong>Acknowledgment:</strong> You'll receive an acknowledgment email within 48 hours with a ticket number</li>
+                <li><strong>Investigation:</strong> We will investigate your complaint thoroughly</li>
+                <li><strong>Resolution:</strong> You'll receive a resolution within 7 business days</li>
+            </ol>
+
+            <h3>Types of Complaints We Handle</h3>
+            <ul>
+                <li>Unauthorized data access or breach</li>
+                <li>Inability to exercise data rights (access, deletion, correction)</li>
+                <li>Concerns about data processing practices</li>
+                <li>Questions about consent management</li>
+                <li>Third-party data sharing concerns</li>
+                <li>General privacy policy questions</li>
+            </ul>
+
+            <h3>Escalation</h3>
+            <p>If you are not satisfied with our resolution, you have the right to escalate your complaint to:</p>
+            <p><strong>Data Protection Board of India</strong><br>
+            Website: <a href="https://dpb.gov.in" target="_blank">https://dpb.gov.in</a> (when operational)<br>
+            <em>Note: The Data Protection Board of India is expected to be fully operational by May 2027.</em></p>
+        </section>
+
+        <section id="contact">
+            <h2>13. Contact Us</h2>
+            
+            <p>If you have any questions, concerns, or feedback about this Privacy Policy or our data practices, please contact us:</p>
+
+            <h3>Developer Contact</h3>
+            <p><strong>Name:</strong> Chinmoy Dutta<br>
+            <strong>Email:</strong> <a href="mailto:dattatechom@gmail.com">dattatechom@gmail.com</a><br>
+            <strong>Response Time:</strong> Within 48 hours</p>
+
+            <h3>What You Can Contact Us About</h3>
+            <ul>
+                <li>Privacy policy questions or clarifications</li>
+                <li>Exercising your data rights (access, deletion, correction)</li>
+                <li>Data security concerns</li>
+                <li>Account deletion requests</li>
+                <li>Consent management questions</li>
+                <li>Third-party service concerns</li>
+                <li>Feedback on our privacy practices</li>
+                <li>Reporting a data breach or security vulnerability</li>
+            </ul>
+
+            <h3>Support</h3>
+            <p>For general app support (not privacy-related), please also email <a href="mailto:dattatechom@gmail.com">dattatechom@gmail.com</a> with "Support Request" in the subject line.</p>
+
+            <h3>Security Vulnerability Reporting</h3>
+            <p>If you discover a security vulnerability in MARK, please report it responsibly:</p>
+            <ul>
+                <li>Email: <a href="mailto:dattatechom@gmail.com">dattatechom@gmail.com</a> with subject "SECURITY VULNERABILITY"</li>
+                <li>Do not publicly disclose the vulnerability until we've had a chance to address it</li>
+                <li>We will respond within 48 hours and work to resolve critical issues promptly</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p><strong>MARK - Money App Re-invented, Kinda</strong></p>
+            <p>Developed by <strong>Chinmoy Dutta</strong></p>
+            <p>Email: <a href="mailto:dattatechom@gmail.com">dattatechom@gmail.com</a></p>
+            <p>&copy; 2026 Chinmoy Dutta. All rights reserved.</p>
+            <p><a href="index.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+        </footer>
+    </main>
+</body>
+</html>

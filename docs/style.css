@@ -1,0 +1,423 @@
+/* MARK - Privacy Policy & Terms of Service Styling */
+/* Professional, mobile-friendly, print-optimized design */
+
+/* ============================================
+   VARIABLES & RESET
+   ============================================ */
+:root {
+  --primary-color: #2563eb;
+  --text-color: #1f2937;
+  --text-light: #6b7280;
+  --bg-color: #ffffff;
+  --bg-secondary: #f9fafb;
+  --border-color: #e5e7eb;
+  --link-color: #2563eb;
+  --link-hover: #1d4ed8;
+  --max-width: 800px;
+  --spacing: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 
+               'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.7;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  padding: 0;
+  margin: 0;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+nav.top-nav {
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 2rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+nav.top-nav a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 1rem;
+  transition: color 0.2s;
+}
+
+nav.top-nav a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* ============================================
+   MAIN CONTAINER
+   ============================================ */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+header .app-name {
+  font-size: 1.25rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+header .effective-date,
+header .last-updated {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin: 0.25rem 0;
+}
+
+/* ============================================
+   TABLE OF CONTENTS
+   ============================================ */
+nav.toc {
+  background-color: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 3rem;
+  border: 1px solid var(--border-color);
+}
+
+nav.toc h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+nav.toc ol {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+nav.toc li {
+  margin: 0.5rem 0;
+}
+
+nav.toc a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+nav.toc a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* ============================================
+   SECTIONS
+   ============================================ */
+section {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+section h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+section h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+section p {
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+section ul,
+section ol {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+section li {
+  margin: 0.5rem 0;
+}
+
+section strong {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+section em {
+  font-style: italic;
+  color: var(--text-light);
+}
+
+/* ============================================
+   LINKS
+   ============================================ */
+a {
+  color: var(--link-color);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+/* ============================================
+   TABLES
+   ============================================ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  overflow-x: auto;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  table {
+    display: table;
+  }
+}
+
+thead {
+  background-color: var(--bg-secondary);
+}
+
+th {
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-color);
+  border-bottom: 2px solid var(--border-color);
+}
+
+td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+tbody tr:hover {
+  background-color: var(--bg-secondary);
+}
+
+/* ============================================
+   BLOCKQUOTES & NOTICES
+   ============================================ */
+blockquote {
+  background-color: #eff6ff;
+  border-left: 4px solid var(--primary-color);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--text-color);
+}
+
+.notice {
+  background-color: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.notice strong {
+  color: #92400e;
+}
+
+/* ============================================
+   CODE & PREFORMATTED TEXT
+   ============================================ */
+code {
+  background-color: var(--bg-secondary);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  color: #dc2626;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--border-color);
+  text-align: center;
+  color: var(--text-light);
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+footer a {
+  color: var(--link-color);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  main {
+    padding: 1.5rem 1rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav.top-nav {
+    padding: 0.75rem 1rem;
+  }
+
+  nav.top-nav a {
+    display: inline-block;
+    margin: 0.25rem 0.5rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  section h3 {
+    font-size: 1.2rem;
+  }
+
+  nav.toc {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+
+  header h1 {
+    font-size: 1.75rem;
+  }
+
+  nav.top-nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  nav.top-nav,
+  nav.toc {
+    display: none;
+  }
+
+  header {
+    border-bottom: 2px solid black;
+  }
+
+  section {
+    page-break-inside: avoid;
+  }
+
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+  }
+
+  table {
+    border: 1px solid black;
+  }
+
+  th, td {
+    border: 1px solid black;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
